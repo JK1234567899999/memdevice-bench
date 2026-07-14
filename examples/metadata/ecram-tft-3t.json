@@ -1,0 +1,44 @@
+{
+  "citation": "",
+  "device": {
+    "behavior_tags": [
+      "analog",
+      "multilevel",
+      "nonvolatile",
+      "potentiation-depression"
+    ],
+    "custom_tags": [
+      "template:ecram-tft-3t"
+    ],
+    "device_id": "ecram-tft-3t-example",
+    "material_tags": [
+      "electrolyte",
+      "oxide"
+    ],
+    "mechanism_tags": [
+      "electrochemical",
+      "ion-insertion",
+      "redox"
+    ],
+    "notes": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "platform_tags": [
+      "tft",
+      "three-terminal",
+      "transistor"
+    ],
+    "technology_tags": [
+      "ecram"
+    ],
+    "terminal_count": 3
+  },
+  "experiment": {
+    "instrument": "",
+    "notes": "",
+    "profile": "pulse-update",
+    "source_format": "canonical-csv",
+    "temperature_k": null
+  },
+  "license": "",
+  "schema_version": "0.2.0",
+  "source_url": ""
+}

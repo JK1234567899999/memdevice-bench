@@ -1,0 +1,44 @@
+{
+  "citation": "",
+  "device": {
+    "behavior_tags": [
+      "analog",
+      "bipolar",
+      "multilevel",
+      "nonvolatile"
+    ],
+    "custom_tags": [
+      "synthetic",
+      "tutorial"
+    ],
+    "device_id": "rram_2t-demo",
+    "material_tags": [
+      "metal-oxide",
+      "oxide"
+    ],
+    "mechanism_tags": [
+      "filamentary",
+      "valence-change"
+    ],
+    "notes": "Synthetic software-test dataset. Numerical trajectories are not a compact physical model of the tagged technology.",
+    "platform_tags": [
+      "crossbar",
+      "resistor",
+      "two-terminal"
+    ],
+    "technology_tags": [
+      "rram"
+    ],
+    "terminal_count": 2
+  },
+  "experiment": {
+    "instrument": "synthetic-generator",
+    "notes": "Bidirectional pulse-update tutorial trace.",
+    "profile": "pulse-update",
+    "source_format": "generated-canonical-csv",
+    "temperature_k": 300.0
+  },
+  "license": "CC0-1.0",
+  "schema_version": "0.2.0",
+  "source_url": ""
+}

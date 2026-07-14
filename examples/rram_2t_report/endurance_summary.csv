@@ -1,0 +1,2 @@
+device_id,cycle_count,initial_window_s,final_window_s,initial_window_ratio,final_window_ratio,fractional_window_drift_per_100_cycles
+rram_2t-demo,2,0.00011023411561309935,0.00010992368570372542,12.472889776013396,12.183801165760709,-0.28160965200962973

@@ -1,0 +1,330 @@
+{
+  "cbram-2t": {
+    "terminal_count": 2,
+    "technology_tags": [
+      "cbram"
+    ],
+    "platform_tags": [
+      "resistor",
+      "two-terminal"
+    ],
+    "mechanism_tags": [
+      "electrochemical-metallization",
+      "filamentary"
+    ],
+    "material_tags": [
+      "solid-electrolyte",
+      "metal"
+    ],
+    "behavior_tags": [
+      "bipolar",
+      "nonvolatile"
+    ],
+    "description": "Two-terminal conductive-bridge/electrochemical-metallization memory.",
+    "caution": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "topology_tag": "two-terminal"
+  },
+  "charge-trap-tft-3t": {
+    "terminal_count": 3,
+    "technology_tags": [
+      "charge-trap-memory",
+      "memtransistor"
+    ],
+    "platform_tags": [
+      "tft",
+      "three-terminal",
+      "transistor"
+    ],
+    "mechanism_tags": [
+      "charge-trap"
+    ],
+    "material_tags": [
+      "oxide"
+    ],
+    "behavior_tags": [
+      "gate-tunable",
+      "multilevel",
+      "nonvolatile"
+    ],
+    "description": "Three-terminal charge-trapping memory transistor/TFT.",
+    "caution": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "topology_tag": "three-terminal"
+  },
+  "dual-gate-memtransistor-4t": {
+    "terminal_count": 4,
+    "technology_tags": [
+      "memtransistor"
+    ],
+    "platform_tags": [
+      "four-terminal",
+      "tft",
+      "transistor"
+    ],
+    "mechanism_tags": [
+      "unknown"
+    ],
+    "material_tags": [
+      "two-dimensional"
+    ],
+    "behavior_tags": [
+      "analog",
+      "gate-tunable",
+      "multilevel"
+    ],
+    "description": "Four-terminal memory transistor with an additional gate/body/write terminal.",
+    "caution": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "topology_tag": "four-terminal"
+  },
+  "ecram-tft-3t": {
+    "terminal_count": 3,
+    "technology_tags": [
+      "ecram"
+    ],
+    "platform_tags": [
+      "tft",
+      "three-terminal",
+      "transistor"
+    ],
+    "mechanism_tags": [
+      "electrochemical",
+      "ion-insertion",
+      "redox"
+    ],
+    "material_tags": [
+      "electrolyte",
+      "oxide"
+    ],
+    "behavior_tags": [
+      "analog",
+      "multilevel",
+      "nonvolatile",
+      "potentiation-depression"
+    ],
+    "description": "Three-terminal ECRAM implemented in a transistor/TFT-like geometry.",
+    "caution": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "topology_tag": "three-terminal"
+  },
+  "fefet-tft-3t": {
+    "terminal_count": 3,
+    "technology_tags": [
+      "fefet"
+    ],
+    "platform_tags": [
+      "fet",
+      "tft",
+      "three-terminal",
+      "transistor"
+    ],
+    "mechanism_tags": [
+      "ferroelectric"
+    ],
+    "material_tags": [
+      "ferroelectric-oxide"
+    ],
+    "behavior_tags": [
+      "gate-tunable",
+      "multilevel",
+      "nonvolatile"
+    ],
+    "description": "Three-terminal ferroelectric field-effect transistor test structure.",
+    "caution": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "topology_tag": "three-terminal"
+  },
+  "flash-mosfet-3t": {
+    "terminal_count": 3,
+    "technology_tags": [
+      "flash",
+      "floating-gate-memory"
+    ],
+    "platform_tags": [
+      "fet",
+      "mosfet",
+      "three-terminal",
+      "transistor"
+    ],
+    "mechanism_tags": [
+      "floating-gate",
+      "tunneling"
+    ],
+    "material_tags": [
+      "oxide",
+      "silicon"
+    ],
+    "behavior_tags": [
+      "binary",
+      "gate-tunable",
+      "nonvolatile"
+    ],
+    "description": "Reduced three-terminal floating-gate MOSFET test configuration.",
+    "caution": "Many practical flash cells expose or control additional nodes. Set terminal_count from the measured DUT interface rather than this template name.",
+    "topology_tag": "three-terminal"
+  },
+  "fram-capacitor-2t": {
+    "terminal_count": 2,
+    "technology_tags": [
+      "fram"
+    ],
+    "platform_tags": [
+      "capacitor",
+      "two-terminal"
+    ],
+    "mechanism_tags": [
+      "ferroelectric"
+    ],
+    "material_tags": [
+      "ferroelectric-oxide"
+    ],
+    "behavior_tags": [
+      "binary",
+      "nonvolatile"
+    ],
+    "description": "Two-terminal ferroelectric capacitor test structure used in FRAM studies.",
+    "caution": "This is a capacitor test structure, not automatically a complete 1T1C cell. Polarization/PUND analysis is outside the current pulse-conductance core.",
+    "topology_tag": "two-terminal"
+  },
+  "ftj-2t": {
+    "terminal_count": 2,
+    "technology_tags": [
+      "ftj"
+    ],
+    "platform_tags": [
+      "two-terminal"
+    ],
+    "mechanism_tags": [
+      "ferroelectric",
+      "tunneling"
+    ],
+    "material_tags": [
+      "ferroelectric-oxide"
+    ],
+    "behavior_tags": [
+      "multilevel",
+      "nonvolatile"
+    ],
+    "description": "Two-terminal ferroelectric tunnel junction.",
+    "caution": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "topology_tag": "two-terminal"
+  },
+  "mram-mtj-2t": {
+    "terminal_count": 2,
+    "technology_tags": [
+      "mram"
+    ],
+    "platform_tags": [
+      "two-terminal"
+    ],
+    "mechanism_tags": [
+      "magnetic",
+      "magnetic-tunnel-junction"
+    ],
+    "material_tags": [
+      "metal",
+      "oxide"
+    ],
+    "behavior_tags": [
+      "binary",
+      "nonvolatile"
+    ],
+    "description": "Two-terminal magnetic tunnel junction read/write element.",
+    "caution": "Use STT-MRAM or SOT-MRAM technology tags only when the write geometry and torque mechanism are established for the measured structure.",
+    "topology_tag": "two-terminal"
+  },
+  "oect-memory-3t": {
+    "terminal_count": 3,
+    "technology_tags": [
+      "redox-transistor"
+    ],
+    "platform_tags": [
+      "oect",
+      "three-terminal",
+      "transistor"
+    ],
+    "mechanism_tags": [
+      "electrochemical",
+      "ionic-gating",
+      "redox"
+    ],
+    "material_tags": [
+      "electrolyte",
+      "organic"
+    ],
+    "behavior_tags": [
+      "analog",
+      "gate-tunable"
+    ],
+    "description": "Three-terminal organic electrochemical transistor used as an adaptive device.",
+    "caution": "OECT is a platform, not automatically a nonvolatile memory. Add volatile/nonvolatile only from measured retention.",
+    "topology_tag": "three-terminal"
+  },
+  "pcm-pram-2t": {
+    "terminal_count": 2,
+    "technology_tags": [
+      "pcm",
+      "pram"
+    ],
+    "platform_tags": [
+      "resistor",
+      "two-terminal"
+    ],
+    "mechanism_tags": [
+      "phase-change",
+      "thermal"
+    ],
+    "material_tags": [
+      "chalcogenide"
+    ],
+    "behavior_tags": [
+      "multilevel",
+      "nonvolatile"
+    ],
+    "description": "Two-terminal phase-change memory (PCM/PRAM).",
+    "caution": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "topology_tag": "two-terminal"
+  },
+  "rram-2t": {
+    "terminal_count": 2,
+    "technology_tags": [
+      "rram"
+    ],
+    "platform_tags": [
+      "resistor",
+      "two-terminal"
+    ],
+    "mechanism_tags": [
+      "unknown"
+    ],
+    "material_tags": [
+      "oxide"
+    ],
+    "behavior_tags": [
+      "nonvolatile"
+    ],
+    "description": "Generic two-terminal RRAM/ReRAM element; mechanism intentionally unspecified.",
+    "caution": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "topology_tag": "two-terminal"
+  },
+  "tft-generic-3t": {
+    "terminal_count": 3,
+    "technology_tags": [
+      "other"
+    ],
+    "platform_tags": [
+      "fet",
+      "tft",
+      "three-terminal",
+      "transistor"
+    ],
+    "mechanism_tags": [
+      "unknown"
+    ],
+    "material_tags": [
+      "oxide"
+    ],
+    "behavior_tags": [
+      "gate-tunable"
+    ],
+    "description": "Generic three-terminal thin-film transistor; no memory mechanism assumed.",
+    "caution": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "topology_tag": "three-terminal"
+  }
+}

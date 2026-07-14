@@ -1,0 +1,40 @@
+{
+  "citation": "",
+  "device": {
+    "behavior_tags": [
+      "bipolar",
+      "nonvolatile"
+    ],
+    "custom_tags": [
+      "template:cbram-2t"
+    ],
+    "device_id": "cbram-2t-example",
+    "material_tags": [
+      "metal",
+      "solid-electrolyte"
+    ],
+    "mechanism_tags": [
+      "electrochemical-metallization",
+      "filamentary"
+    ],
+    "notes": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "platform_tags": [
+      "resistor",
+      "two-terminal"
+    ],
+    "technology_tags": [
+      "cbram"
+    ],
+    "terminal_count": 2
+  },
+  "experiment": {
+    "instrument": "",
+    "notes": "",
+    "profile": "pulse-update",
+    "source_format": "canonical-csv",
+    "temperature_k": null
+  },
+  "license": "",
+  "schema_version": "0.2.0",
+  "source_url": ""
+}

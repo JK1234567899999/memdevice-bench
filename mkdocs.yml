@@ -1,0 +1,13 @@
+site_name: MemDeviceBench
+site_description: Tagged benchmarking for 2-, 3-, and 4-terminal memory and adaptive devices
+repo_url: https://github.com/JK1234567899999/memdevice-bench
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Tagging model: tagging.md
+  - Data format: data-format.md
+  - Metrics: metrics.md
+  - Contributing datasets: contributing-datasets.md
+  - Project architecture: architecture.md
+  - Korean project brief: project-brief-ko.md

@@ -1,0 +1,61 @@
+{
+  "all_tags": [
+    "analog",
+    "bipolar",
+    "crossbar",
+    "filamentary",
+    "metal-oxide",
+    "multilevel",
+    "nonvolatile",
+    "oxide",
+    "resistor",
+    "rram",
+    "synthetic",
+    "tutorial",
+    "two-terminal",
+    "valence-change"
+  ],
+  "behavior_tags": [
+    "analog",
+    "bipolar",
+    "multilevel",
+    "nonvolatile"
+  ],
+  "branch_count": 4,
+  "custom_tags": [
+    "synthetic",
+    "tutorial"
+  ],
+  "cycle_count": 2,
+  "device_count": 1,
+  "energy_method": "measured_v_i_t",
+  "energy_note": "Uses measured current in the programming path.",
+  "energy_status": "computed",
+  "experiment_profile": "pulse-update",
+  "material_tags": [
+    "metal-oxide",
+    "oxide"
+  ],
+  "mechanism_tags": [
+    "filamentary",
+    "valence-change"
+  ],
+  "median_linearity_nrmse": 0.0769419807635929,
+  "median_monotonicity": 1.0,
+  "median_pulse_energy_j": 9.013554721001646e-11,
+  "median_update_asymmetry": 0.0030051417379605982,
+  "median_update_cv": 0.27572072356039057,
+  "median_window_ratio": 12.328345470887053,
+  "metadata_schema_version": "0.2.0",
+  "platform_tags": [
+    "crossbar",
+    "resistor",
+    "two-terminal"
+  ],
+  "technology_tags": [
+    "rram"
+  ],
+  "terminal_count": 2,
+  "topology_tag": "two-terminal",
+  "total_programming_energy_j": 1.1714806731103773e-08
+}

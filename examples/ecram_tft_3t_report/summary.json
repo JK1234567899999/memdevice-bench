@@ -1,0 +1,63 @@
+{
+  "all_tags": [
+    "analog",
+    "ecram",
+    "electrochemical",
+    "electrolyte",
+    "ion-insertion",
+    "multilevel",
+    "nonvolatile",
+    "oxide",
+    "potentiation-depression",
+    "redox",
+    "synthetic",
+    "tft",
+    "three-terminal",
+    "transistor",
+    "tutorial"
+  ],
+  "behavior_tags": [
+    "analog",
+    "multilevel",
+    "nonvolatile",
+    "potentiation-depression"
+  ],
+  "branch_count": 4,
+  "custom_tags": [
+    "synthetic",
+    "tutorial"
+  ],
+  "cycle_count": 2,
+  "device_count": 1,
+  "energy_method": "measured_v_i_t",
+  "energy_note": "Uses measured current in the programming path.",
+  "energy_status": "computed",
+  "experiment_profile": "pulse-update",
+  "material_tags": [
+    "electrolyte",
+    "oxide"
+  ],
+  "mechanism_tags": [
+    "electrochemical",
+    "ion-insertion",
+    "redox"
+  ],
+  "median_linearity_nrmse": 0.0769419807635929,
+  "median_monotonicity": 1.0,
+  "median_pulse_energy_j": 1.2e-10,
+  "median_update_asymmetry": 0.0030051417379605393,
+  "median_update_cv": 0.27572072356039046,
+  "median_window_ratio": 12.328345470887047,
+  "metadata_schema_version": "0.2.0",
+  "platform_tags": [
+    "tft",
+    "three-terminal",
+    "transistor"
+  ],
+  "technology_tags": [
+    "ecram"
+  ],
+  "terminal_count": 3,
+  "topology_tag": "three-terminal",
+  "total_programming_energy_j": 1.536e-08
+}

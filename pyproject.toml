@@ -1,0 +1,110 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "memdevice-bench"
+version = "0.2.0"
+description = "Topology- and mechanism-aware benchmarking for 2-, 3-, and 4-terminal memory and adaptive electronic devices."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [
+  { name = "MemDeviceBench contributors" }
+]
+keywords = [
+  "RRAM",
+  "ReRAM",
+  "PRAM",
+  "PCM",
+  "FRAM",
+  "FeFET",
+  "ECRAM",
+  "CBRAM",
+  "TFT",
+  "memtransistor",
+  "memristor",
+  "neuromorphic",
+  "analog memory",
+  "device characterization",
+  "semiconductor devices",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering",
+]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2",
+  "mypy>=1.10",
+  # NumPy 2.3+ stubs use Python 3.12-only syntax, while mypy intentionally
+  # checks this package against its declared Python 3.10 compatibility floor.
+  "numpy<2.3",
+  "pandas-stubs>=2.2",
+  "pytest>=8.0",
+  "pytest-cov>=5.0",
+  "ruff>=0.5",
+  "twine>=5.1",
+]
+docs = [
+  "mkdocs>=1.6",
+  "mkdocs-material>=9.5",
+]
+
+[project.scripts]
+memdevice-bench = "memdevice_bench.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/JK1234567899999/memdevice-bench"
+Documentation = "https://JK1234567899999.github.io/memdevice-bench/"
+Issues = "https://github.com/JK1234567899999/memdevice-bench/issues"
+Source = "https://github.com/JK1234567899999/memdevice-bench"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+memdevice_bench = ["py.typed"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_unused_configs = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+check_untyped_defs = true
+
+[tool.coverage.run]
+source = ["memdevice_bench"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 80

@@ -1,0 +1,40 @@
+{
+  "citation": "",
+  "device": {
+    "behavior_tags": [
+      "multilevel",
+      "nonvolatile"
+    ],
+    "custom_tags": [
+      "template:pcm-pram-2t"
+    ],
+    "device_id": "pcm-pram-2t-example",
+    "material_tags": [
+      "chalcogenide"
+    ],
+    "mechanism_tags": [
+      "phase-change",
+      "thermal"
+    ],
+    "notes": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "platform_tags": [
+      "resistor",
+      "two-terminal"
+    ],
+    "technology_tags": [
+      "pcm",
+      "pram"
+    ],
+    "terminal_count": 2
+  },
+  "experiment": {
+    "instrument": "",
+    "notes": "",
+    "profile": "pulse-update",
+    "source_format": "canonical-csv",
+    "temperature_k": null
+  },
+  "license": "",
+  "schema_version": "0.2.0",
+  "source_url": ""
+}

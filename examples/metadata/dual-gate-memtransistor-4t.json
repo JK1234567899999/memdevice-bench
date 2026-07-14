@@ -1,0 +1,40 @@
+{
+  "citation": "",
+  "device": {
+    "behavior_tags": [
+      "analog",
+      "gate-tunable",
+      "multilevel"
+    ],
+    "custom_tags": [
+      "template:dual-gate-memtransistor-4t"
+    ],
+    "device_id": "dual-gate-memtransistor-4t-example",
+    "material_tags": [
+      "two-dimensional"
+    ],
+    "mechanism_tags": [
+      "unknown"
+    ],
+    "notes": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "platform_tags": [
+      "four-terminal",
+      "tft",
+      "transistor"
+    ],
+    "technology_tags": [
+      "memtransistor"
+    ],
+    "terminal_count": 4
+  },
+  "experiment": {
+    "instrument": "",
+    "notes": "",
+    "profile": "pulse-update",
+    "source_format": "canonical-csv",
+    "temperature_k": null
+  },
+  "license": "",
+  "schema_version": "0.2.0",
+  "source_url": ""
+}

@@ -1,0 +1,41 @@
+{
+  "citation": "",
+  "device": {
+    "behavior_tags": [
+      "gate-tunable",
+      "multilevel",
+      "nonvolatile"
+    ],
+    "custom_tags": [
+      "template:charge-trap-tft-3t"
+    ],
+    "device_id": "charge-trap-tft-3t-example",
+    "material_tags": [
+      "oxide"
+    ],
+    "mechanism_tags": [
+      "charge-trap"
+    ],
+    "notes": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "platform_tags": [
+      "tft",
+      "three-terminal",
+      "transistor"
+    ],
+    "technology_tags": [
+      "charge-trap-memory",
+      "memtransistor"
+    ],
+    "terminal_count": 3
+  },
+  "experiment": {
+    "instrument": "",
+    "notes": "",
+    "profile": "pulse-update",
+    "source_format": "canonical-csv",
+    "temperature_k": null
+  },
+  "license": "",
+  "schema_version": "0.2.0",
+  "source_url": ""
+}

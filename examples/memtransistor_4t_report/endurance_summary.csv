@@ -1,0 +1,2 @@
+device_id,cycle_count,initial_window_s,final_window_s,initial_window_ratio,final_window_ratio,fractional_window_drift_per_100_cycles
+memtransistor_4t-demo,2,6.81447260153705e-05,6.796118752593934e-05,39.76678151743064,37.037956091641675,-0.26933630841772854

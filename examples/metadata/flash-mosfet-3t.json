@@ -1,0 +1,44 @@
+{
+  "citation": "",
+  "device": {
+    "behavior_tags": [
+      "binary",
+      "gate-tunable",
+      "nonvolatile"
+    ],
+    "custom_tags": [
+      "template:flash-mosfet-3t"
+    ],
+    "device_id": "flash-mosfet-3t-example",
+    "material_tags": [
+      "oxide",
+      "silicon"
+    ],
+    "mechanism_tags": [
+      "floating-gate",
+      "tunneling"
+    ],
+    "notes": "Many practical flash cells expose or control additional nodes. Set terminal_count from the measured DUT interface rather than this template name.",
+    "platform_tags": [
+      "fet",
+      "mosfet",
+      "three-terminal",
+      "transistor"
+    ],
+    "technology_tags": [
+      "flash",
+      "floating-gate-memory"
+    ],
+    "terminal_count": 3
+  },
+  "experiment": {
+    "instrument": "",
+    "notes": "",
+    "profile": "switching",
+    "source_format": "canonical-csv",
+    "temperature_k": null
+  },
+  "license": "",
+  "schema_version": "0.2.0",
+  "source_url": ""
+}

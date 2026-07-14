@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:memdevice-bench:schema:pulse-update-row:0.2.0",
+  "title": "MemDeviceBench canonical pulse-update row",
+  "description": "One canonical row represents the positive read-conductance magnitude measured after a programming pulse. Static device identity and terminal topology live in a metadata sidecar.",
+  "type": "object",
+  "required": [
+    "device_id",
+    "cycle",
+    "pulse_index",
+    "direction",
+    "conductance_s"
+  ],
+  "properties": {
+    "device_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cycle": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "pulse_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "direction": {
+      "type": "string",
+      "enum": [
+        "potentiation",
+        "depression"
+      ]
+    },
+    "conductance_s": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "pulse_voltage_v": {
+      "type": "number"
+    },
+    "pulse_width_s": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "pulse_current_a": {
+      "type": "number"
+    },
+    "read_voltage_v": {
+      "type": "number"
+    },
+    "read_current_a": {
+      "type": "number"
+    },
+    "timestamp_s": {
+      "type": "number",
+      "minimum": 0
+    },
+    "pulse_terminal": {
+      "type": "string"
+    },
+    "read_terminal": {
+      "type": "string"
+    },
+    "state_label": {
+      "type": "string"
+    },
+    "gate_voltage_v": {
+      "type": "number"
+    },
+    "drain_voltage_v": {
+      "type": "number"
+    },
+    "source_voltage_v": {
+      "type": "number"
+    },
+    "body_voltage_v": {
+      "type": "number"
+    },
+    "gate_current_a": {
+      "type": "number"
+    },
+    "drain_current_a": {
+      "type": "number"
+    },
+    "source_current_a": {
+      "type": "number"
+    },
+    "body_current_a": {
+      "type": "number"
+    }
+  },
+  "additionalProperties": true
+}

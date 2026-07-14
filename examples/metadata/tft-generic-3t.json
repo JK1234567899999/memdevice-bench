@@ -1,0 +1,39 @@
+{
+  "citation": "",
+  "device": {
+    "behavior_tags": [
+      "gate-tunable"
+    ],
+    "custom_tags": [
+      "template:tft-generic-3t"
+    ],
+    "device_id": "tft-generic-3t-example",
+    "material_tags": [
+      "oxide"
+    ],
+    "mechanism_tags": [
+      "unknown"
+    ],
+    "notes": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "platform_tags": [
+      "fet",
+      "tft",
+      "three-terminal",
+      "transistor"
+    ],
+    "technology_tags": [
+      "other"
+    ],
+    "terminal_count": 3
+  },
+  "experiment": {
+    "instrument": "",
+    "notes": "",
+    "profile": "transfer-curve",
+    "source_format": "canonical-csv",
+    "temperature_k": null
+  },
+  "license": "",
+  "schema_version": "0.2.0",
+  "source_url": ""
+}

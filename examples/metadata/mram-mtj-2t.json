@@ -1,0 +1,39 @@
+{
+  "citation": "",
+  "device": {
+    "behavior_tags": [
+      "binary",
+      "nonvolatile"
+    ],
+    "custom_tags": [
+      "template:mram-mtj-2t"
+    ],
+    "device_id": "mram-mtj-2t-example",
+    "material_tags": [
+      "metal",
+      "oxide"
+    ],
+    "mechanism_tags": [
+      "magnetic",
+      "magnetic-tunnel-junction"
+    ],
+    "notes": "Use STT-MRAM or SOT-MRAM technology tags only when the write geometry and torque mechanism are established for the measured structure.",
+    "platform_tags": [
+      "two-terminal"
+    ],
+    "technology_tags": [
+      "mram"
+    ],
+    "terminal_count": 2
+  },
+  "experiment": {
+    "instrument": "",
+    "notes": "",
+    "profile": "switching",
+    "source_format": "canonical-csv",
+    "temperature_k": null
+  },
+  "license": "",
+  "schema_version": "0.2.0",
+  "source_url": ""
+}

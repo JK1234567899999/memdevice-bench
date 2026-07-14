@@ -1,0 +1,21 @@
+include LICENSE
+include Makefile
+include CITATION.cff
+include CHANGELOG.md
+include CONTRIBUTING.md
+include CODE_OF_CONDUCT.md
+include GOVERNANCE.md
+include SECURITY.md
+include ROADMAP.md
+include PROJECT_LAUNCH.md
+include IMPACT.md
+include COMMUNITY_TASKS.md
+include README.ko.md
+recursive-include docs *.md
+recursive-include prompts *.md
+recursive-include datasets *.md
+recursive-include schema *.json
+recursive-include examples *.py *.csv *.md *.json *.png
+recursive-include application *.md
+recursive-include scripts *.py
+recursive-include scripts *.py

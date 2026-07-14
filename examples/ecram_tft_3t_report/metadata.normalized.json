@@ -1,0 +1,45 @@
+{
+  "citation": "",
+  "device": {
+    "behavior_tags": [
+      "analog",
+      "multilevel",
+      "nonvolatile",
+      "potentiation-depression"
+    ],
+    "custom_tags": [
+      "synthetic",
+      "tutorial"
+    ],
+    "device_id": "ecram_tft_3t-demo",
+    "material_tags": [
+      "electrolyte",
+      "oxide"
+    ],
+    "mechanism_tags": [
+      "electrochemical",
+      "ion-insertion",
+      "redox"
+    ],
+    "notes": "Synthetic software-test dataset. Numerical trajectories are not a compact physical model of the tagged technology.",
+    "platform_tags": [
+      "tft",
+      "three-terminal",
+      "transistor"
+    ],
+    "technology_tags": [
+      "ecram"
+    ],
+    "terminal_count": 3
+  },
+  "experiment": {
+    "instrument": "synthetic-generator",
+    "notes": "Bidirectional pulse-update tutorial trace.",
+    "profile": "pulse-update",
+    "source_format": "generated-canonical-csv",
+    "temperature_k": 300.0
+  },
+  "license": "CC0-1.0",
+  "schema_version": "0.2.0",
+  "source_url": ""
+}

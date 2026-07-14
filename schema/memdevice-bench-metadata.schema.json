@@ -1,0 +1,266 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:memdevice-bench:schema:metadata:0.2.0",
+  "title": "MemDeviceBench dataset metadata",
+  "description": "Topology-aware metadata for memory and adaptive electronic-device datasets. Controlled tags are separated by physical axis.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "device",
+    "experiment"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "device": {
+      "type": "object",
+      "required": [
+        "device_id",
+        "terminal_count",
+        "technology_tags",
+        "platform_tags",
+        "mechanism_tags",
+        "material_tags",
+        "behavior_tags",
+        "custom_tags",
+        "notes"
+      ],
+      "properties": {
+        "device_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "terminal_count": {
+          "type": "integer",
+          "minimum": 2
+        },
+        "technology_tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "cbram",
+              "charge-trap-memory",
+              "ecram",
+              "fefet",
+              "flash",
+              "floating-gate-memory",
+              "fram",
+              "ftj",
+              "memcapacitor",
+              "memdiode",
+              "memristor",
+              "memtransistor",
+              "molecular-memory",
+              "mott-memory",
+              "mram",
+              "other",
+              "pcm",
+              "pram",
+              "redox-transistor",
+              "rram",
+              "selector",
+              "sot-mram",
+              "stt-mram"
+            ]
+          },
+          "minItems": 1
+        },
+        "platform_tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "1r-cell",
+              "1s1r-cell",
+              "1t1c-cell",
+              "1t1r-cell",
+              "capacitor",
+              "crossbar",
+              "crosspoint",
+              "diode",
+              "electrolyte-gated-transistor",
+              "fet",
+              "flexible",
+              "four-terminal",
+              "mosfet",
+              "multi-terminal",
+              "oect",
+              "other",
+              "planar",
+              "resistor",
+              "tft",
+              "three-terminal",
+              "transistor",
+              "two-terminal",
+              "vertical"
+            ]
+          }
+        },
+        "mechanism_tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "charge-trap",
+              "electrochemical",
+              "electrochemical-metallization",
+              "ferroelectric",
+              "filamentary",
+              "floating-gate",
+              "interfacial-barrier",
+              "interfacial-switching",
+              "ion-insertion",
+              "ionic-gating",
+              "magnetic",
+              "magnetic-tunnel-junction",
+              "mixed",
+              "mott-transition",
+              "phase-change",
+              "redox",
+              "thermal",
+              "tunneling",
+              "unknown",
+              "valence-change"
+            ]
+          }
+        },
+        "material_tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "chalcogenide",
+              "electrolyte",
+              "ferroelectric-oxide",
+              "ionic-liquid",
+              "metal",
+              "metal-oxide",
+              "nitride",
+              "organic",
+              "other",
+              "oxide",
+              "perovskite",
+              "polymer",
+              "silicon",
+              "solid-electrolyte",
+              "two-dimensional"
+            ]
+          }
+        },
+        "behavior_tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "analog",
+              "asymmetric",
+              "binary",
+              "bipolar",
+              "gate-tunable",
+              "incremental",
+              "multilevel",
+              "nonvolatile",
+              "potentiation-depression",
+              "reservoir",
+              "stochastic",
+              "symmetric",
+              "synaptic",
+              "threshold-switching",
+              "unipolar",
+              "volatile"
+            ]
+          }
+        },
+        "custom_tags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "experiment": {
+      "type": "object",
+      "required": [
+        "profile",
+        "instrument",
+        "source_format",
+        "temperature_k",
+        "notes"
+      ],
+      "properties": {
+        "profile": {
+          "type": "string",
+          "enum": [
+            "dc-iv",
+            "endurance",
+            "frequency",
+            "impedance",
+            "ltp",
+            "noise",
+            "output-curve",
+            "polarization",
+            "ppf",
+            "pulse-update",
+            "read-disturb",
+            "reservoir-computing",
+            "retention",
+            "stdp",
+            "stp",
+            "switching",
+            "switching-speed",
+            "temperature",
+            "transfer-curve",
+            "transient",
+            "variability",
+            "write-disturb"
+          ]
+        },
+        "instrument": {
+          "type": "string"
+        },
+        "source_format": {
+          "type": "string"
+        },
+        "temperature_k": {
+          "anyOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "license": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "citation": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

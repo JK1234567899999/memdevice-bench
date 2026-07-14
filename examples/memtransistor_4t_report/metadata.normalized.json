@@ -1,0 +1,45 @@
+{
+  "citation": "",
+  "device": {
+    "behavior_tags": [
+      "analog",
+      "multilevel",
+      "nonvolatile",
+      "synaptic"
+    ],
+    "custom_tags": [
+      "synthetic",
+      "tutorial"
+    ],
+    "device_id": "memtransistor_4t-demo",
+    "material_tags": [
+      "oxide",
+      "two-dimensional"
+    ],
+    "mechanism_tags": [
+      "charge-trap",
+      "interfacial-barrier"
+    ],
+    "notes": "Synthetic software-test dataset. Numerical trajectories are not a compact physical model of the tagged technology.",
+    "platform_tags": [
+      "four-terminal",
+      "tft",
+      "transistor"
+    ],
+    "technology_tags": [
+      "charge-trap-memory",
+      "memtransistor"
+    ],
+    "terminal_count": 4
+  },
+  "experiment": {
+    "instrument": "synthetic-generator",
+    "notes": "Bidirectional pulse-update tutorial trace.",
+    "profile": "pulse-update",
+    "source_format": "generated-canonical-csv",
+    "temperature_k": 300.0
+  },
+  "license": "CC0-1.0",
+  "schema_version": "0.2.0",
+  "source_url": ""
+}

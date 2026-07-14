@@ -1,0 +1,38 @@
+{
+  "citation": "",
+  "device": {
+    "behavior_tags": [
+      "multilevel",
+      "nonvolatile"
+    ],
+    "custom_tags": [
+      "template:ftj-2t"
+    ],
+    "device_id": "ftj-2t-example",
+    "material_tags": [
+      "ferroelectric-oxide"
+    ],
+    "mechanism_tags": [
+      "ferroelectric",
+      "tunneling"
+    ],
+    "notes": "Template only: verify terminal count, mechanism, materials, and behavior for the actual measured DUT before publication.",
+    "platform_tags": [
+      "two-terminal"
+    ],
+    "technology_tags": [
+      "ftj"
+    ],
+    "terminal_count": 2
+  },
+  "experiment": {
+    "instrument": "",
+    "notes": "",
+    "profile": "switching",
+    "source_format": "canonical-csv",
+    "temperature_k": null
+  },
+  "license": "",
+  "schema_version": "0.2.0",
+  "source_url": ""
+}

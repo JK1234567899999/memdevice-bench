@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use MemDeviceBench, cite the software release, dataset, and metric definitions used in your analysis."
+title: "MemDeviceBench: topology-aware benchmarking for memory and adaptive electronic devices"
+version: 0.2.0
+license: Apache-2.0
+authors:
+  - name: "MemDeviceBench contributors"
+repository-code: "https://github.com/JK1234567899999/memdevice-bench"
+keywords:
+  - two-terminal devices
+  - three-terminal devices
+  - four-terminal devices
+  - RRAM
+  - PRAM
+  - PCM
+  - FRAM
+  - FeFET
+  - ECRAM
+  - CBRAM
+  - MRAM
+  - TFT
+  - OECT
+  - memtransistor
+  - analog memory
+  - device characterization

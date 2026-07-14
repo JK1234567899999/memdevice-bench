@@ -1,0 +1,56 @@
+name: Dataset or importer contribution
+description: Propose a public dataset, dataset card, experiment profile, or instrument importer
+title: "[Dataset/Importer]: "
+labels: [data, contribution]
+body:
+  - type: dropdown
+    id: contribution_type
+    attributes:
+      label: Contribution type
+      options:
+        - Public dataset and dataset card
+        - Instrument/export importer
+        - Synthetic validation trace
+        - Metadata/tag taxonomy improvement
+        - New experiment profile
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source and license
+      description: Give a DOI/stable source and explain redistribution rights.
+    validations:
+      required: true
+  - type: textarea
+    id: device
+    attributes:
+      label: Device identity and topology
+      description: State technology tags, accessible terminal count, platform, terminal names, and circuit-cell context such as bare 2T, 1T1R, or 1T1C.
+    validations:
+      required: true
+  - type: textarea
+    id: measurement
+    attributes:
+      label: Measurement format
+      description: Instrument, columns, SI units, pulse/read paths, timing, bandwidth, compliance, and known limitations.
+    validations:
+      required: true
+  - type: textarea
+    id: mechanism
+    attributes:
+      label: Mechanism evidence
+      description: Explain the evidence for mechanism tags, or state unknown/mixed.
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I have not included confidential, embargoed, proprietary, or restricted data.
+          required: true
+        - label: I distinguished accessible terminal count from circuit-level 1T1R/1T1C notation.
+          required: true
+        - label: Synthetic data are clearly labeled and are not presented as a physical compact model.
+          required: true
+        - label: The proposed change is technically meaningful and not intended to inflate contributor metrics.
+          required: true

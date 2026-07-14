@@ -1,0 +1,63 @@
+{
+  "all_tags": [
+    "analog",
+    "charge-trap",
+    "charge-trap-memory",
+    "four-terminal",
+    "interfacial-barrier",
+    "memtransistor",
+    "multilevel",
+    "nonvolatile",
+    "oxide",
+    "synaptic",
+    "synthetic",
+    "tft",
+    "transistor",
+    "tutorial",
+    "two-dimensional"
+  ],
+  "behavior_tags": [
+    "analog",
+    "multilevel",
+    "nonvolatile",
+    "synaptic"
+  ],
+  "branch_count": 4,
+  "custom_tags": [
+    "synthetic",
+    "tutorial"
+  ],
+  "cycle_count": 2,
+  "device_count": 1,
+  "energy_method": "measured_v_i_t",
+  "energy_note": "Uses measured current in the programming path.",
+  "energy_status": "computed",
+  "experiment_profile": "pulse-update",
+  "material_tags": [
+    "oxide",
+    "two-dimensional"
+  ],
+  "mechanism_tags": [
+    "charge-trap",
+    "interfacial-barrier"
+  ],
+  "median_linearity_nrmse": 0.0769419945338638,
+  "median_monotonicity": 1.0,
+  "median_pulse_energy_j": 2e-10,
+  "median_update_asymmetry": 0.003004833881409717,
+  "median_update_cv": 0.2757184832305879,
+  "median_window_ratio": 38.40236880453615,
+  "metadata_schema_version": "0.2.0",
+  "platform_tags": [
+    "four-terminal",
+    "tft",
+    "transistor"
+  ],
+  "technology_tags": [
+    "charge-trap-memory",
+    "memtransistor"
+  ],
+  "terminal_count": 4,
+  "topology_tag": "four-terminal",
+  "total_programming_energy_j": 2.5600000000000004e-08
+}

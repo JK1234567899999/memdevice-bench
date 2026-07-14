@@ -1,0 +1,30 @@
+name: Bug report
+description: Report an incorrect result, crash, or validation problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Include a small synthetic or redistributable trace where possible.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: MemDeviceBench version
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Python, OS, and dependency versions.

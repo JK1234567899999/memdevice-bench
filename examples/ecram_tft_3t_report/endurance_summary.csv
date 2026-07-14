@@ -1,0 +1,2 @@
+device_id,cycle_count,initial_window_s,final_window_s,initial_window_ratio,final_window_ratio,fractional_window_drift_per_100_cycles
+ecram_tft_3t-demo,2,0.00016535117341964903,0.0001648855285555881,12.472889776013385,12.18380116576071,-0.28160965200965604

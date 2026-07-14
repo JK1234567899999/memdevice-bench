@@ -1,0 +1,42 @@
+{
+  "citation": "",
+  "device": {
+    "behavior_tags": [
+      "analog",
+      "gate-tunable"
+    ],
+    "custom_tags": [
+      "template:oect-memory-3t"
+    ],
+    "device_id": "oect-memory-3t-example",
+    "material_tags": [
+      "electrolyte",
+      "organic"
+    ],
+    "mechanism_tags": [
+      "electrochemical",
+      "ionic-gating",
+      "redox"
+    ],
+    "notes": "OECT is a platform, not automatically a nonvolatile memory. Add volatile/nonvolatile only from measured retention.",
+    "platform_tags": [
+      "oect",
+      "three-terminal",
+      "transistor"
+    ],
+    "technology_tags": [
+      "redox-transistor"
+    ],
+    "terminal_count": 3
+  },
+  "experiment": {
+    "instrument": "",
+    "notes": "",
+    "profile": "pulse-update",
+    "source_format": "canonical-csv",
+    "temperature_k": null
+  },
+  "license": "",
+  "schema_version": "0.2.0",
+  "source_url": ""
+}
