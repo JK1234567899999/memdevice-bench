@@ -8,7 +8,7 @@ from .device_profiles import (
     device_profiles_as_dict,
     metadata_for_device_profile,
 )
-from .energy import EnergyReport, estimate_pulse_energy
+from .energy import EnergyReport, check_programming_path_consistency, estimate_pulse_energy
 from .io import load_trace, normalize_trace, save_trace
 from .metadata import (
     DatasetMetadata,
@@ -50,6 +50,7 @@ __all__ = [
     "analyze_trace",
     "available_device_profiles",
     "available_presets",
+    "check_programming_path_consistency",
     "compute_branch_metrics",
     "compute_cycle_summary",
     "device_profiles_as_dict",

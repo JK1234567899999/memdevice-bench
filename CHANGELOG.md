@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Added non-fatal 3T/4T programming-path consistency warnings that compare generic pulse
+  current with declared terminal-resolved and read-path currents when available.
+
 ## 0.2.0
 
 - Renamed and generalized the project from an ECRAM-focused package to MemDeviceBench.

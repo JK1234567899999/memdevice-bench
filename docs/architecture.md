@@ -21,7 +21,8 @@ This structure permits new experiment profiles to be added without redefining de
 - `schema.py`: numerical table validation.
 - `io.py`: CSV load/save and direction normalization.
 - `metrics.py`: branch, cycle, and endurance metrics.
-- `energy.py`: measured programming energy and restricted two-terminal fallback.
+- `energy.py`: measured programming energy, restricted two-terminal fallback, and
+  multi-terminal programming-path provenance checks.
 - `retention.py`: power-law retention fit.
 - `synthetic.py`: tagged software-test presets.
 - `analysis.py`: composition and metadata integration.

@@ -55,6 +55,7 @@ MemDeviceBench provides:
 - validation for units, branch order, signs, timestamps, terminal-tag consistency, and read-current/read-voltage consistency;
 - transparent linearity, monotonicity, update variability, symmetry, conductance-window, endurance, retention, and energy metrics;
 - topology-aware energy handling that prevents channel read conductance from being substituted for an unmeasured 3T/4T programming current;
+- multi-terminal programming-path provenance warnings that compare generic pulse current with terminal-resolved and read-path current when available;
 - machine-readable JSON/CSV reports and an overview figure;
 - contribution units for instrument importers, metrics, public datasets, and future experiment profiles.
 

@@ -22,23 +22,26 @@ Keep these scientific rules intact:
 - The files in `examples/` are deterministic synthetic tutorial/test data, not experimental
   benchmark data or compact physical models.
 
-## Current state (2026-07-14)
+## Current state (updated 2026-07-15)
 
 - Public repository: <https://github.com/JK1234567899999/memdevice-bench>
 - Branch: `main`; initial public commit: `a32b003719e22b5c249e3fd9deb1a13484bd8bde`
 - The initial worktree was clean after push. Always run `git status --short --branch` before
   changing anything; preserve user changes if the worktree is no longer clean.
 - GitHub CI and OpenSSF Scorecard passed on the initial public commit.
+- The unreleased branch adds 3T/4T programming-path consistency warnings so a generic
+  `pulse_current_a` can be compared with declared terminal-resolved and read-path current.
 - No GitHub Release and no PyPI publication have been made. Do not create either merely as
   part of maintenance; use a clean version tag and confirm the release checklist first.
 
 ## Verified local baseline
 
-The initial release was checked with Python 3.12:
+The initial release was checked with Python 3.12. The latest local check after the
+programming-path consistency addition also passed with 25 tests and 82.47% coverage:
 
 - `ruff check .` passed.
 - `mypy src/memdevice_bench` passed.
-- `pytest --cov=memdevice_bench --cov-report=term-missing` passed: 21 tests, 82.30% coverage.
+- `pytest --cov=memdevice_bench --cov-report=term-missing` passed: 25 tests, 82.47% coverage.
 - `python -m build` and `python -m twine check dist/*` passed.
 
 The developer extra pins `numpy<2.3` because newer NumPy stubs use Python 3.12-only syntax

@@ -81,6 +81,16 @@ def test_analysis_skips_invalid_multiterminal_fallback() -> None:
     assert report.summary["energy_status"] == "not_computed"
 
 
+def test_analysis_reports_multiterminal_programming_path_warning() -> None:
+    trace = generate_synthetic_trace(
+        preset="ecram-tft-3t", cycles=1, pulses_per_branch=5
+    )
+    trace["pulse_current_a"] = trace["drain_current_a"]
+    metadata = metadata_for_preset("ecram-tft-3t")
+    report = analyze_trace(trace, metadata=metadata)
+    assert any("gate_current_a" in note for note in report.notes)
+
+
 def test_common_device_profile_templates_keep_axes_separate() -> None:
     from memdevice_bench.device_profiles import metadata_for_device_profile
 

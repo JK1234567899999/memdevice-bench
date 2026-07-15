@@ -21,6 +21,130 @@ class EnergyReport:
     note: str
 
 
+_TERMINAL_CURRENT_COLUMNS = {
+    "gate": "gate_current_a",
+    "drain": "drain_current_a",
+    "source": "source_current_a",
+    "body": "body_current_a",
+    "back-gate": "body_current_a",
+    "backgate": "body_current_a",
+}
+
+
+def _current_column_for_terminal_path(value: object) -> str | None:
+    """Infer a terminal-resolved current column from a path label when possible."""
+
+    label = str(value).strip().lower()
+    for terminal, column in _TERMINAL_CURRENT_COLUMNS.items():
+        if label.startswith(terminal):
+            return column
+    return None
+
+
+def _median_relative_difference(reference: np.ndarray, observed: np.ndarray) -> float:
+    """Return a stable median difference between current magnitudes."""
+
+    denominator = np.maximum(np.abs(reference), np.finfo(float).tiny)
+    return float(np.median(np.abs(np.abs(observed) - np.abs(reference)) / denominator))
+
+
+def check_programming_path_consistency(
+    df: pd.DataFrame,
+    *,
+    terminal_count: int | None,
+) -> tuple[str, ...]:
+    """Return non-fatal warnings about multi-terminal programming-current provenance.
+
+    The check is deliberately conservative: it only compares a generic
+    ``pulse_current_a`` value with terminal-resolved currents when the declared
+    ``pulse_terminal`` identifies the corresponding terminal. It does not infer
+    device physics from a technology tag or reject a valid but unusual wiring
+    scheme; users should document such schemes in metadata notes.
+    """
+
+    if terminal_count is None or terminal_count < 3 or "pulse_current_a" not in df.columns:
+        return ()
+
+    program_current = pd.to_numeric(df["pulse_current_a"], errors="coerce")
+    finite_program = np.isfinite(program_current.to_numpy(dtype=float))
+    if not finite_program.any():
+        return ()
+
+    warnings: list[str] = []
+    if "pulse_terminal" not in df.columns:
+        return (
+            "multi-terminal trace provides pulse_current_a without pulse_terminal; "
+            "cannot verify that it is a programming-path current",
+        )
+
+    pulse_terminal = df["pulse_terminal"].fillna("").astype(str).str.strip().str.lower()
+    labeled_program = finite_program & pulse_terminal.ne("").to_numpy()
+    unlabeled_count = int(finite_program.sum() - labeled_program.sum())
+    if unlabeled_count:
+        warnings.append(
+            f"{unlabeled_count} multi-terminal rows provide pulse_current_a without a "
+            "pulse_terminal label; their programming path cannot be checked"
+        )
+
+    if "read_terminal" not in df.columns:
+        warnings.append(
+            "multi-terminal trace has no read_terminal labels; programming and read paths "
+            "cannot be distinguished"
+        )
+    else:
+        read_terminal = df["read_terminal"].fillna("").astype(str).str.strip().str.lower()
+        comparable_paths = labeled_program & read_terminal.ne("").to_numpy()
+        same_path = pulse_terminal.eq(read_terminal).to_numpy() & comparable_paths
+        same_path_count = int(same_path.sum())
+        if same_path_count:
+            warnings.append(
+                f"{same_path_count} multi-terminal rows use the same pulse_terminal and "
+                "read_terminal; verify that pulse_current_a is not a read-path current"
+            )
+
+    program_values = program_current.to_numpy(dtype=float)
+    for current_column in sorted(set(_TERMINAL_CURRENT_COLUMNS.values())):
+        if current_column not in df.columns:
+            continue
+        matching_terminal = np.array(
+            [
+                _current_column_for_terminal_path(value) == current_column
+                for value in pulse_terminal
+            ],
+            dtype=bool,
+        )
+        terminal_current = pd.to_numeric(df[current_column], errors="coerce").to_numpy(dtype=float)
+        mask = matching_terminal & finite_program & np.isfinite(terminal_current)
+        if int(mask.sum()) < 3:
+            continue
+        mismatch = _median_relative_difference(terminal_current[mask], program_values[mask])
+        if mismatch > 0.1:
+            warnings.append(
+                f"pulse_current_a differs from {current_column} on {int(mask.sum())} "
+                f"programming-path rows (median relative mismatch {mismatch:.1%}); "
+                "verify the programming-current mapping"
+            )
+
+    if {
+        "read_current_a",
+        "pulse_terminal",
+        "read_terminal",
+    }.issubset(df.columns):
+        read_current = pd.to_numeric(df["read_current_a"], errors="coerce").to_numpy(dtype=float)
+        different_paths = pulse_terminal.ne(read_terminal).to_numpy()
+        mask = finite_program & np.isfinite(read_current) & labeled_program & different_paths
+        if int(mask.sum()) >= 3:
+            mismatch = _median_relative_difference(read_current[mask], program_values[mask])
+            if mismatch <= 0.01:
+                warnings.append(
+                    "pulse_current_a closely matches read_current_a while programming and read "
+                    "terminal paths differ; verify that a channel read current was not supplied "
+                    "as programming current"
+                )
+
+    return tuple(dict.fromkeys(warnings))
+
+
 def estimate_pulse_energy(
     df: pd.DataFrame,
     *,

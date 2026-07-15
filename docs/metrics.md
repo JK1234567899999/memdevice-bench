@@ -46,6 +46,15 @@ This assumes the read conductance approximates conductance during the program pu
 
 For known 3- or 4-terminal devices, the fallback is disabled. Channel read conductance generally does not determine current through a gate dielectric, electrolyte, or separate write terminal. Without `pulse_current_a`, the report records energy as not computed.
 
+### Programming-path consistency warnings
+
+For 3T/4T datasets, MemDeviceBench compares `pulse_current_a` with a terminal-resolved
+current when `pulse_terminal` identifies a gate, drain, source, or body path. A median
+magnitude mismatch above 10% generates a warning; so does a generic programming current
+that closely matches `read_current_a` while the declared pulse and read paths differ.
+These are provenance checks, not automatic wiring corrections. Unusual but valid wiring
+must be documented in the terminal-path fields and metadata notes.
+
 ## Endurance drift
 
 Window drift is obtained from a linear fit of conductance window versus cycle index and normalized to the initial window. This is a descriptive slope, not an extrapolated lifetime. Failure-cycle statistics require a declared failure criterion and longer cycling data.

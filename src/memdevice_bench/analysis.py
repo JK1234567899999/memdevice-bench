@@ -7,7 +7,7 @@ from typing import Any
 
 import pandas as pd
 
-from .energy import EnergyReport, estimate_pulse_energy
+from .energy import EnergyReport, check_programming_path_consistency, estimate_pulse_energy
 from .io import normalize_trace
 from .metadata import DatasetMetadata, metadata_summary, normalize_metadata, validate_metadata
 from .metrics import (
@@ -61,6 +61,7 @@ def analyze_trace(
         notes.extend(metadata_report.warnings)
         terminal_count = normalized_metadata.device.terminal_count
         summary.update(metadata_summary(normalized_metadata))
+        notes.extend(check_programming_path_consistency(trace, terminal_count=terminal_count))
 
         table_device_ids = set(trace["device_id"].astype(str).unique())
         if normalized_metadata.device.device_id not in table_device_ids:
