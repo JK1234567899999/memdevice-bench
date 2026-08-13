@@ -13,3 +13,10 @@ Include the affected version, reproduction steps, impact, and any suggested reme
 ## Data safety
 
 MemDeviceBench processes local files and does not upload data. Contributors must not add telemetry or network transmission without a design review and an explicit opt-in mechanism.
+
+## Fuzzing scope
+
+Pull requests run a bounded ClusterFuzzLite/Atheris target against malformed
+pulse-update CSV input. The target is intended to detect parser and schema
+validation crashes; it is not a substitute for scientific validation of a
+measurement or for review of topology-specific analysis assumptions.
