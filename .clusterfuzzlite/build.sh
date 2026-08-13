@@ -10,6 +10,7 @@ for fuzzer in "$SRC"/memdevice-bench/fuzzers/*_fuzzer.py; do
   pyinstaller --distpath "$OUT" --onefile --name "$fuzzer_package" "$fuzzer"
   printf '%s\n' \
     '#!/bin/sh' \
+    '# LLVMFuzzerTestOneInput for fuzzer detection.' \
     'this_dir=$(dirname "$0")' \
     'LD_PRELOAD="$this_dir/sanitizer_with_fuzzer.so" \' \
     'ASAN_OPTIONS="$ASAN_OPTIONS:symbolize=1:external_symbolizer_path=$this_dir/llvm-symbolizer:detect_leaks=0" \' \
