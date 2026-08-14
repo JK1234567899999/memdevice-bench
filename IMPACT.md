@@ -24,4 +24,13 @@ This file is intentionally factual. Update it only with verifiable links or regi
 
 ## Maintenance activity
 
-- Initial implementation, tests, documentation, metadata taxonomy, and governance prepared locally.
+- 2026-07-14: Public repository launched with Apache-2.0 licensing, tests,
+  contribution guidance, governance, and citation metadata.
+- 2026-08-14: Added CodeQL, OpenSSF Scorecard, dependency updates, private
+  vulnerability reporting, branch protection, and a bounded Python fuzzing
+  workflow.
+- 2026-08-14: Enabled [GitHub Discussions](https://github.com/JK1234567899999/memdevice-bench/discussions)
+  and published transparent maintainer-created contribution requests for a
+  [B1500A/WGFMU import example](https://github.com/JK1234567899999/memdevice-bench/issues/12),
+  a [redistributable 3T dataset card](https://github.com/JK1234567899999/memdevice-bench/issues/13),
+  and a [Korean quick-start walkthrough](https://github.com/JK1234567899999/memdevice-bench/issues/14).
