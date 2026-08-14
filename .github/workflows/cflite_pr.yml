@@ -9,7 +9,7 @@ permissions: {}
 
 jobs:
   fuzz:
-    name: Fuzz Python CSV validation
+    name: Fuzz Python metadata validation
     runs-on: ubuntu-latest
     permissions:
       contents: read

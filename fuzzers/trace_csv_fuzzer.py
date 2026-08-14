@@ -1,31 +1,38 @@
-"""Coverage-guided fuzz target for malformed pulse-update CSV input."""
+"""Coverage-guided fuzz target for malformed metadata JSON input."""
 
 from __future__ import annotations
 
-import io
+import json
 import sys
 
 import atheris
 
 with atheris.instrument_imports(include=["memdevice_bench"]):
-    import pandas as pd
-
-    from memdevice_bench.schema import validate_trace
+    from memdevice_bench.metadata import (
+        MetadataValidationError,
+        metadata_from_dict,
+        validate_metadata,
+    )
 
 
 def test_one_input(data: bytes) -> None:
-    """Exercise schema validation with a bounded, arbitrarily malformed CSV."""
+    """Exercise metadata decoding and validation with arbitrary JSON."""
 
     try:
-        trace = pd.read_csv(
-            io.StringIO(data[:65_536].decode("utf-8", errors="replace")),
-            on_bad_lines="skip",
-            nrows=256,
-        )
-    except (pd.errors.EmptyDataError, pd.errors.ParserError, UnicodeError):
+        payload = json.loads(data[:65_536].decode("utf-8", errors="replace"))
+        if not isinstance(payload, dict):
+            return
+        metadata = metadata_from_dict(payload)
+        validate_metadata(metadata, strict=False)
+    except (
+        json.JSONDecodeError,
+        MetadataValidationError,
+        OverflowError,
+        RecursionError,
+        TypeError,
+        ValueError,
+    ):
         return
-
-    validate_trace(trace, strict=False)
 
 
 def main() -> None:

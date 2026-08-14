@@ -17,6 +17,6 @@ MemDeviceBench processes local files and does not upload data. Contributors must
 ## Fuzzing scope
 
 Pull requests run a bounded ClusterFuzzLite/Atheris target against malformed
-pulse-update CSV input. The target is intended to detect parser and schema
+metadata JSON input. The target is intended to detect decoder and metadata
 validation crashes; it is not a substitute for scientific validation of a
 measurement or for review of topology-specific analysis assumptions.
