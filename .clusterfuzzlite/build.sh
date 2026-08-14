@@ -1,8 +1,6 @@
 #!/bin/bash
 set -euxo pipefail
 
-python3 -m pip install "$SRC/memdevice-bench"
-
 for fuzzer in "$SRC"/memdevice-bench/fuzzers/*_fuzzer.py; do
   fuzzer_basename=$(basename -s .py "$fuzzer")
   fuzzer_package="${fuzzer_basename}.pkg"
