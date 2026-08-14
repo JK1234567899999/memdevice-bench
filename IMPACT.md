@@ -4,7 +4,9 @@ This file is intentionally factual. Update it only with verifiable links or regi
 
 ## Releases
 
-- No public release recorded yet. `v0.2.0` is the prepared initial alpha candidate.
+- 2026-08-14: [v0.2.0](https://github.com/JK1234567899999/memdevice-bench/releases/tag/v0.2.0)
+  initial public alpha release, published on
+  [PyPI](https://pypi.org/project/memdevice-bench/).
 
 ## External contributors
 
@@ -16,7 +18,8 @@ This file is intentionally factual. Update it only with verifiable links or regi
 
 ## Downloads
 
-- Not published yet.
+- The package is published on PyPI. Cumulative download figures are not yet
+  recorded; add registry statistics only when they are publicly verifiable.
 
 ## Research use and citations
 
