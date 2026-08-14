@@ -19,3 +19,6 @@ Each CSV has a matching `.metadata.json` sidecar and a topology-specific report 
 Profiles are editable starting points, not physical assertions. Mechanism, material, behavior, and terminal count must be checked against the actual measured DUT. FRAM polarization, FTJ/MRAM switching, and generic TFT transfer-curve files are metadata-only examples because those numerical profiles are roadmap items rather than implemented pulse-update conductance analyses.
 
 All generated traces are software-test/tutorial data, not compact physical models or literature reference datasets.
+
+For the commands and scientific guardrails needed to move from these tutorial
+files to a real measurement, see the [first-trace walkthrough](../docs/first-real-trace.md).

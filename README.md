@@ -139,6 +139,14 @@ report = analyze_trace(trace, metadata=metadata)
 print(report.summary["all_tags"])
 ```
 
+## Run a topology-aware example
+
+The repository includes complete synthetic tutorial traces and generated reports
+for [2T RRAM](examples/rram_2t.csv), [3T ECRAM/TFT](examples/ecram_tft_3t.csv),
+and [4T memtransistor](examples/memtransistor_4t.csv) workflows. Start with the
+[first-trace walkthrough](docs/first-real-trace.md) to validate, analyze, and
+interpret one trace without changing its original measurement context.
+
 ## Canonical pulse table
 
 Required columns:
